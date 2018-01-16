@@ -89,7 +89,7 @@ if [[ $OW_DB == "cloudant" ]]; then
   export OW_DB="Cloudant"
   export OW_DB_PROTOCOL="https"
   export OW_DB_HOST="$OW_DB_USERNAME.cloudant.com"
-  export OW_DB_PORT="443"
+  export OW_DB_PORT="1443"
 else
   export OW_DB="CouchDB"
   export OW_DB_PROTOCOL=#{ENV['OW_DB_PROTOCOL']}

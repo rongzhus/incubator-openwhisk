@@ -122,7 +122,7 @@ def replayDatabases(args):
         print("replaying backup: %s -> %s (%s)" % (db, plainDbName, identifier))
 
 parser = argparse.ArgumentParser(description="Utility to create a backup of all databases with the defined prefix.")
-parser.add_argument("--sourceDbUrl", required=True, help="Server URL of the source database, that has to be backed up. E.g. 'https://xxx:yyy@domain.couch.com:443'")
+parser.add_argument("--sourceDbUrl", required=True, help="Server URL of the source database, that has to be backed up. E.g. 'https://xxx:yyy@domain.couch.com:1443'")
 parser.add_argument("--targetDbUrl", required=True, help="Server URL of the target database, where the backup is stored. Like sourceDbUrl.")
 subparsers = parser.add_subparsers(help='sub-command help')
 

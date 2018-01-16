@@ -119,7 +119,7 @@ export OW_DB_USERNAME=<your cloudant user>
 export OW_DB_PASSWORD=<your cloudant password>
 export OW_DB_PROTOCOL=https
 export OW_DB_HOST=<your cloudant user>.cloudant.com
-export OW_DB_PORT=443
+export OW_DB_PORT=1443
 
 ansible-playbook -i environments/<environment> couchdb.yml --tags ini
 ```
@@ -306,7 +306,7 @@ If you need Python to find the installed site-packages:
   mkdir -p ~/Library/Python/2.7/lib/python/site-packages
   echo '/usr/local/lib/python2.7/site-packages' > ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth
 ```
-  
+
 Just run the two commands to fix this issue.
 
 #### Spaces in Paths

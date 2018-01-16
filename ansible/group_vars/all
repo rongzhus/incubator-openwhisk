@@ -18,7 +18,7 @@ exclude_logs_from: []
 #   whisk_api_localhost_name_default (last)
 whisk_api_localhost_name_default: "localhost"
 
-hosts_dir: "{{ inventory_dir| default(env_hosts_dir) }}" 
+hosts_dir: "{{ inventory_dir| default(env_hosts_dir) }}"
 
 whisk:
   version:
@@ -119,7 +119,7 @@ nginx:
   version: "{{ nginx_version | default(1.11) }}"
   port:
     http: 80
-    api: 443
+    api: 1443
     adminportal: 8443
   ssl:
     path: "{{ openwhisk_home }}/ansible/roles/nginx/files"
@@ -152,7 +152,7 @@ db:
 apigateway:
   port:
     api: 9000
-    api_secure: 443
+    api_secure: 1443
     mgmt: 9001
   version: 0.8.2
 

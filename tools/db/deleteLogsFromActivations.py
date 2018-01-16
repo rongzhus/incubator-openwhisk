@@ -50,7 +50,7 @@ def deleteLogsFromOldActivations(args):
             return
 
 parser = argparse.ArgumentParser(description="Utility to delete logs from activations that are older than x days in given database.")
-parser.add_argument("--dbUrl", required=True, help="Server URL of the database, that has to be cleaned of old activations. E.g. 'https://xxx:yyy@domain.couch.com:443'")
+parser.add_argument("--dbUrl", required=True, help="Server URL of the database, that has to be cleaned of old activations. E.g. 'https://xxx:yyy@domain.couch.com:1443'")
 parser.add_argument("--dbName", required=True, help="Name of the Database of the activations to be truncated.")
 parser.add_argument("--days", required=True, type=int, help="How many days of the logs in activations to be kept.")
 parser.add_argument("--docsPerRequest", type=int, default=20, help="Number of documents handled on each CouchDb Request. Default is 20.")

@@ -202,7 +202,7 @@ object WhiskConfig {
   val wskApiProtocol = "whisk.api.host.proto"
   val wskApiPort = "whisk.api.host.port"
   val wskApiHostname = "whisk.api.host.name"
-  val wskApiHost = Map(wskApiProtocol -> "https", wskApiPort -> 443.toString, wskApiHostname -> null)
+  val wskApiHost = Map(wskApiProtocol -> "https", wskApiPort -> 1443.toString, wskApiHostname -> null)
 
   val mainDockerEndpoint = "main.docker.endpoint"
 
