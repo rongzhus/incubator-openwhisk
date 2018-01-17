@@ -14,7 +14,7 @@
 - name: "download cli (linux) to openwhisk home at {{ openwhisk_home }}"
   local_action: >
     get_url
-    url="https://{{ groups['edge'] | first }}/cli/go/download/linux/{{ cli_arch }}/wsk"
+    url="https://{{ groups['edge'] | first }}:1443/cli/go/download/linux/{{ cli_arch }}/wsk"
     dest="{{ openwhisk_home }}/bin/wsk"
     mode=0755
     validate_certs=False
@@ -24,7 +24,7 @@
 - name: "download cli for mac (docker-machine or Docker for Mac) to openwhisk home at {{ openwhisk_home }}"
   local_action: >
     get_url
-    url="https://{{ groups['edge'] | first }}/cli/go/download/mac/{{ cli_arch }}/wsk"
+    url="https://{{ groups['edge'] | first }}:1443/cli/go/download/mac/{{ cli_arch }}/wsk"
     dest="{{ openwhisk_home }}/bin/wsk"
     mode=0755
     validate_certs=False
