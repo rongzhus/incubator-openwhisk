@@ -119,7 +119,7 @@ Backups are essential for running a production system of any sort and size. `rep
 
 All commands for `replicateDbs.py` take two standard parameters:
 
-* `--sourceDbUrl`: Server URL of the source database, that has to be backed up. E.g. 'https://xxx:yyy@domain.couch.com:1443'.
+* `--sourceDbUrl`: Server URL of the source database, that has to be backed up. E.g. 'https://xxx:yyy@domain.couch.com:443'.
 * `--targetDbUrl`: Server URL of the target database, where the backup is stored. Like sourceDbUrl.
 
 ### Creating a snapshot

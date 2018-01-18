@@ -52,7 +52,7 @@ trait RestUtil {
    */
   def getServiceURL(): String = {
     val apiPort = WhiskProperties.getEdgeHostApiPort()
-    val protocol = if (apiPort == 1443) "https" else "http"
+    val protocol = if (apiPort == 443) "https" else "http"
     protocol + "://" + WhiskProperties.getEdgeHost() + ":" + apiPort
   }
 

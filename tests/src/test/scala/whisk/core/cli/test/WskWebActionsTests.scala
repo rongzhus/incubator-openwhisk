@@ -108,7 +108,7 @@ abstract class WskWebActionsTests extends TestHelpers with WskTestHelpers with R
       ("A", 200),
       ("A" * padAmount, 200),
       // ideally the bad case is just +1 but there's some differences
-      // in how characters are counted i.e., whether these count "https://:1443"
+      // in how characters are counted i.e., whether these count "https://:443"
       // or not; it seems sufficient to test right around the boundary
       ("A" * (padAmount + 100), 414))
       .foreach {
