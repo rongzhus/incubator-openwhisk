@@ -28,7 +28,7 @@ whisk.ssl.challenge=openwhisk
  # with parts separated by a single dash.
  #}
 whisk.api.host.proto={{ whisk_api_host_proto | default('https') }}
-whisk.api.host.port={{ whisk_api_host_port | default('1443') }}
+whisk.api.host.port={{ whisk_api_host_port | default('443') }}
 whisk.api.host.name={{ whisk_api_host_name | default(groups['edge'] | first) }}
 whisk.api.localhost.name={{ whisk_api_localhost_name | default(whisk_api_host_name) | default(whisk_api_localhost_name_default) }}
 whisk.api.vanity.subdomain.parts=1
@@ -48,7 +48,7 @@ router.host={{ groups["edge"]|first }}
 zookeeper.hosts={{ zookeeper_connect_string }}
 invoker.hosts={{ groups["invokers"] | map('extract', hostvars, 'ansible_host') | list | join(",") }}
 
-edge.host.apiport=1443
+edge.host.apiport=443
 kafkaras.host.port={{ kafka.ras.port }}
 redis.host.port={{ redis.port }}
 invoker.hosts.basePort={{ invoker.port }}
